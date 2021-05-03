@@ -13,12 +13,16 @@
 # limitations under the License.
 ---
 settings:
-  name: generic-project
+  name: kubernetes-triage
   # On a scale of 0-1, how similar do two issues need to be to be tagged as "similar"
   min_similarity: 0.75
   # Repositories to query, can be overridden by -repos
   repos:
-    - https://github.com/photoprism/photoprism
+    - https://github.com/hashicorp/terraform-provider-kubernetes
+    - https://github.com/hashicorp/terraform-provider-kubernetes-alpha
+    - https://github.com/hashicorp/terraform-provider-helm
+    - https://github.com/hashicorp/terraform-helm
+    - https://github.com/hashicorp/terraform-k8s
 
   member-roles: []
   # Who should automatically be considered a project member?
@@ -29,10 +33,12 @@ settings:
   #  - collaborator
   #  - owner
   #  - member
-  members: []
+  # members: []
   # Who else do we consider to be a project member? Default is empty.
-  # members:
-  #  - tstromberg
+  members:
+    - jrhouston
+    - dak1n1
+    - alexsomesan
 
 collections:
   - id: daily
